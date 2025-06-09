@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: radial-gradient(ellipse at bottom, #0a0a0a 0%, #000000 50%, #111111 100%);
+  color: #e5e5e5;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fondo de estrellas doradas MÁS SUTILES */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #d4af37, transparent),
+    radial-gradient(1px 1px at 40px 70px, #b8860b, transparent),
+    radial-gradient(1px 1px at 90px 40px, #daa520, transparent),
+    radial-gradient(1px 1px at 130px 80px, #cd853f, transparent),
+    radial-gradient(1px 1px at 160px 30px, #bc9a6a, transparent);
+  background-repeat: repeat;
+  background-size: 220px 120px;
+  animation: twinkle-subtle 6s linear infinite;
+  pointer-events: none;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+@keyframes twinkle-subtle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.35; }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #333333, #555555);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #444444, #666666);
+}
+
+/* Efectos de glassmorphism espacial oscuro MÁS SUTIL */
+.glass {
+  background: rgba(212, 175, 55, 0.02);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* Gradiente galáctico oscuro animado */
+.gradient-bg {
+  background: linear-gradient(-45deg, #000000, #1a1a1a, #2d2d2d, #333333, #1a1a1a);
+  background-size: 400% 400%;
+  animation: dark-galaxy-flow 25s ease infinite;
+}
+
+/* Efectos de texto espacial dorado MÁS SUTIL */
+.text-gradient {
+  background: linear-gradient(135deg, #d4af37, #b8860b, #daa520, #bc9a6a);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: golden-text-subtle 5s ease infinite;
+}
+
+.text-stellar {
+  color: #e5e5e5;
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+}
+
+.text-golden {
+  color: #d4af37;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
+}
+
+/* Efectos hover espaciales oscuros MÁS SUTILES */
+.hover-glow:hover {
+  box-shadow: 
+    0 0 15px rgba(212, 175, 55, 0.2),
+    0 0 25px rgba(212, 175, 55, 0.1),
+    0 0 35px rgba(212, 175, 55, 0.05);
+  transform: translateY(-3px);
+  transition: all 0.4s ease;
+}
+
+.hover-stellar:hover {
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Partículas estelares doradas MÁS SUTILES */
+.stellar-particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float-stellar 6s ease-in-out infinite;
+}
+
+/* Botones espaciales oscuros */
+.btn-stellar {
+  background: linear-gradient(135deg, #2d2d2d, #404040);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(212, 175, 55, 0.08);
+  transition: all 0.3s ease;
+}
+
+.btn-stellar:hover {
+  background: linear-gradient(135deg, #404040, #555555);
+  box-shadow: 
+    0 6px 25px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(212, 175, 55, 0.15),
+    inset 0 1px 0 rgba(212, 175, 55, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-stellar-outline {
+  background: rgba(212, 175, 55, 0.03);
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.btn-stellar-outline:hover {
+  background: rgba(212, 175, 55, 0.06);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Keyframes espaciales oscuros */
+@keyframes dark-galaxy-flow {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+@keyframes golden-text-subtle {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float-stellar {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  33% { 
+    transform: translateY(-15px) rotate(120deg);
+    opacity: 0.5;
+  }
+  66% { 
+    transform: translateY(-5px) rotate(240deg);
+    opacity: 0.4;
+  }
+}
+
+@keyframes pulse-stellar-subtle {
+  0%, 100% { 
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    transform: scale(1.03);
+  }
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+/* Efectos de loading espacial */
+.loading-stellar {
+  background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.15), transparent);
+  animation: stellar-sweep 2s infinite;
+}
+
+@keyframes stellar-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Colores de fondo alternativos */
+.bg-space-primary { background: #000000; }
+.bg-space-secondary { background: #1a1a1a; }
+.bg-space-tertiary { background: #2d2d2d; }
+.bg-space-accent { background: #333333; }
+
+.text-space-primary { color: #e5e5e5; }
+.text-space-secondary { color: #cccccc; }
+.text-space-accent { color: #d4af37; }
+.text-space-muted { color: #999999; }
+
+.border-space { border-color: rgba(212, 175, 55, 0.15); }
+.border-space-bright { border-color: rgba(212, 175, 55, 0.3); }
+
+/* Animaciones adicionales MÁS SUTILES */
+.animate-float-stellar {
+  animation: float-stellar 4s ease-in-out infinite;
+}
+
+.animate-pulse-stellar {
+  animation: pulse-stellar-subtle 4s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+/* Selección de texto */
+::selection {
+  background: rgba(212, 175, 55, 0.15);
+  color: #ffffff;
+}
+
+/* Focus styles */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+  ring: 2px solid rgba(212, 175, 55, 0.3);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Efectos adicionales para elementos interactivos MÁS SUTILES */
+.card-hover:hover {
+  background: rgba(212, 175, 55, 0.015);
+  border-color: rgba(212, 175, 55, 0.12);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.golden-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.08);
+}
+
+.golden-glow:hover {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
