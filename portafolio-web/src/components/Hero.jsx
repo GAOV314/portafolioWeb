@@ -71,7 +71,7 @@ const Hero = () => {
         >
           <span className="text-white">Gadiel Amir</span>
           <br />
-          <span className="text-gradient">Ocaña Veliz</span>
+          <span className="text-gradient">Ocaña Véliz</span>
         </motion.h1>
 
         {/* Subtítulo */}

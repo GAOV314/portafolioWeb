@@ -501,7 +501,7 @@ const Projects = () => {
           {/* Título de sección */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <span className="inline-block px-4 py-2 bg-stellar-bright/10 text-stellar-bright rounded-full text-sm font-medium mb-4 font-mono">
-              Mi trabajo
+              💼 Mi trabajo
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono">
               Mis <span className="text-gradient">Proyectos</span>
@@ -543,28 +543,6 @@ const Projects = () => {
                 />
               ))}
             </AnimatePresence>
-          </motion.div>
-
-          {/* Estadísticas de proyectos */}
-          <motion.div variants={itemVariants} className="mt-20">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="glass rounded-xl p-6">
-                <h3 className="text-3xl font-bold text-stellar-bright mb-2 font-mono">{projects.length}</h3>
-                <p className="text-space-muted font-mono">Proyectos Desarrollados</p>
-              </div>
-              <div className="glass rounded-xl p-6">
-                <h3 className="text-3xl font-bold text-stellar-bright mb-2 font-mono">
-                  {[...new Set(projects.flatMap(p => p.technologies))].length}
-                </h3>
-                <p className="text-space-muted font-mono">Tecnologías Utilizadas</p>
-              </div>
-              <div className="glass rounded-xl p-6">
-                <h3 className="text-3xl font-bold text-stellar-bright mb-2 font-mono">
-                  {projects.filter(p => p.status === 'Completado').length}
-                </h3>
-                <p className="text-space-muted font-mono">Proyectos Completados</p>
-              </div>
-            </div>
           </motion.div>
         </motion.div>
       </div>
